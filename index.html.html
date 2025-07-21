@@ -1,0 +1,210 @@
+<!DOCTYPE html>    
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Digital</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuente Inter para una apariencia moderna */
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        /* Estilos generales para secciones */
+        section {
+            @apply py-16 px-4 md:px-8 lg:px-16;
+        }
+        .container {
+            @apply max-w-6xl mx-auto;
+        }
+        /* Estilo para los títulos de sección */
+        h2 {
+            @apply text-4xl font-extrabold text-center mb-12 text-gray-900;
+        }
+        /* Estilo para los subtítulos de proyecto */
+        h3 {
+            @apply text-2xl font-bold mb-3 text-gray-800;
+        }
+        /* Estilo para botones */
+        .btn {
+            @apply inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-300 ease-in-out;
+        }
+        /* Estilo para tarjetas de proyecto */
+        .project-card {
+            @apply bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105;
+        }
+        .project-image {
+            @apply rounded-lg mb-4 object-cover w-full h-48; /* Ajustado para mejor visualización */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 py-4 flex justify-between items-center">
+            <!-- MODIFICA AQUÍ: Tu Nombre/Marca en la barra de navegación -->
+            <a href="#" class="text-2xl font-bold text-indigo-700">Manuel Andre
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#sobre-mi" class="text-gray-600 hover:text-indigo-700 transition-colors duration-200">Sobre Mí</a>
+                <a href="#proyectos" class="text-gray-600 hover:text-indigo-700 transition-colors duration-200">Proyectos</a>
+                <a href="#contacto" class="text-gray-600 hover:text-indigo-700 transition-colors duration-200">Contacto</a>
+            </div>
+            <!-- Menú hamburguesa para móviles -->
+            <button id="menu-button" class="md:hidden text-gray-600 hover:text-indigo-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menú móvil desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-inner">
+            <a href="#sobre-mi" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors duration-200">Sobre Mí</a>
+            <a href="#proyectos" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors duration-200">Proyectos</a>
+            <a href="#contacto" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-colors duration-200">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero/Introducción -->
+    <header class="bg-indigo-600 text-white py-32 text-center">
+        <div class="container mx-auto px-4">
+            <img src="https://placehold.co/150x150/667EEA/FFFFFF?text=Tu+Foto" alt="Tu Foto de Perfil" class="rounded-full w-36 h-36 mx-auto mb-6 border-4 border-white shadow-lg">
+            <!-- MODIFICA AQUÍ: Tu Nombre en la sección de introducción -->
+            <h1 class="text-5xl font-extrabold mb-4 leading-tight">Hola, soy Manuel</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Soy un estudiante universitario apasionado por el deporte. Aquí puedes explorar mis trabajos y aprender más sobre mí.</p>
+            <a href="#proyectos" class="btn">Ver mis Proyectos</a>
+        </div>
+    </header>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="bg-white">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/667EEA/FFFFFF?text=Imagen+Sobre+Mí" alt="Imagen sobre mí" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-700">
+                    <!-- MODIFICA AQUÍ: Tu Nombre Completo en la sección Sobre Mí -->
+                    <p class="mb-4">Soy Manuel Andre Barrionuevo Montes, un estudiante universitario con 19. Mi pasión radica en en el campo de la eduacaion fisica .</p>
+                    <p>Estoy siempre en busca de nuevos desafíos y oportunidades para aprender y crecer. ¡Explora mis proyectos para ver cómo aplico mis habilidades en la práctica!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="bg-gray-50">
+        <div class="container">
+            <h2>Mis Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <img src="https://www.powtoon.com/blog/wp-content/uploads/2020/03/New_Logo_Powtoon-13-2.png" alt="Imagen del Proyecto 1" class="project-image">
+                    <h3>video de pawtoon </h3>
+                    <p class="text-gray-600 mb-4">Breve descripción del proyecto, es un video que habla sobre las caracteristicas de las tic"</p>
+                    <!-- ENLACE MODIFICADO -->
+                    <a href="https://www.powtoon.com/online-presentation/glUQpl3mgw1/?utm_medium=social-share&utm_campaign=studio+share&utm_source=copy+link&utm_content=glUQpl3mgw1&utm_po=50058044&mode=movie " class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.ED-M7gVB3sWunPNP5nlWsAHaD-?pid=Api&P=0&h=180" alt="Imagen del Proyecto 2" class="project-image">
+                    <h3>trabajo en la herramienta prezi</h3>
+                    <p class="text-gray-600 mb-4">el presente trabajo habla sobre la vida saludable en el colegio y que tan importante es en los estudiantes ."</p>
+                    <!-- ENLACE MODIFICADO -->
+                    <a href="https://prezi.com/view/UxW4U22qwuRMgTeE64NW/ " class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.14FplwL7-OmZu7Pg305xEAHaHa?pid=Api&P=0&h=180" alt="Imagen del Proyecto 3" class="project-image">
+                    <h3>trabajo de kahoot</h3>
+                    <p class="text-gray-600 mb-4">se realizo preguntas sobre la vida saludable en la escuela."</p>
+                    <!-- ENLACE MODIFICADO -->
+                    <a href="https://create.kahoot.it/share/vida-saludable/2378e77c-b4f6-4a6b-87da-f3229609c744" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 4  -->
+                <div class="project-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.3T_l1SLiGuatZrXTMqBmBwHaHa?pid=Api&P=0&h=180" alt="Imagen del Nuevo Proyecto" class="project-image">
+                    <h3> 5 diapositivas sobre la vida saludable</h3>
+                    <p class="text-gray-600 mb-4">las presentes diapositivas preentaran sobre la vida saludable, su importancia, salud mental, actividad fisica, etc, solo se presentara 1 </p>
+                    <a href="https://www.canva.com/design/DAGm6_8XQbA/6E6vpnOobCSkvwkJfjgg8w/edit?utm_content=DAGm6_8XQbA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.uFoI-Dc0ZeCMbhdH209BtAHaD4?pid=Api&P=0&h=180" alt="Imagen de Otro Proyecto" class="project-image">
+                    <h3>video sobre el respeto al adulto mayor</h3>
+                    <p class="text-gray-600 mb-4">este video fue realizado en la herramienta de cap cut, trata sobre el respeto a los adultos mayores .</p>
+                    <a href="https://drive.google.com/file/d/1GF_PL1nl4KmDAw7_3hZICRiKM57J072l/view" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- Proyecto 6 -->
+                <div class="project-card">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.FCgQpnM98BCVJabXzBu3EgHaFS?pid=Api&P=0&h=180" alt="Imagen del Último Proyecto" class="project-image">
+                    <h3>line del tiempo de las TIC</h3>
+                    <p class="text-gray-600 mb-4">se muestra toda la historia y la evolucion de las TIC.</p>
+                    <a href="https://create.piktochart.com/output/8f66f7cfcd96-biggest-technology-trends" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver Proyecto</a>
+                </div>
+                <!-- trabajos en PDF -->
+                <div class="project-card">
+                    <img src="https://placehold.co/400x250/FF6B6B/FFFFFF?text=Documento+PDF" alt="Imagen de un documento PDF" class="project-image">
+                    <h3>trabajos PDF</h3>
+                    <p class="text-gray-600 mb-4">aqui se presentan las sesiones trabajda. Haz clic para ver el documento completo en formato PDF.</p>
+                    <!-- Reemplaza '#' con el enlace público a tu archivo PDF -->
+                    <a href="https://drive.google.com/drive/folders/1uMns9e_WLdmhhWzsuBYt-2gemHj7arSs?usp=drive_link" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Ver PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="bg-white">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="text-center max-w-2xl mx-auto text-lg text-gray-700">
+                <p class="mb-6">¿Interesado en colaborar o simplemente quieres saludar? No dudes en contactarme.</p>
+                <p class="mb-2"><strong>Email:</strong> <a href="mailto:tu.email@example.com" class="text-indigo-600 hover:underline">tu.email@example.com</a></p>
+                <p class="mb-6"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tunombre/" target="_blank" class="text-indigo-600 hover:underline">linkedin.com/in/tunombre</a></p>
+                <!-- Puedes añadir más enlaces a redes sociales o un formulario de contacto aquí -->
+                <a href="mailto:tu.email@example.com" class="btn mt-4">Enviar Mensaje</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <!-- MODIFICA AQUÍ: Tu Nombre en el pie de página -->
+            <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <!-- Iconos de redes sociales (ej. Font Awesome si se incluye) -->
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <!-- Placeholder para icono de LinkedIn -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                    <!-- Placeholder para icono de GitHub -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para el menú hamburguesa en móviles
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Ocultar el menú móvil cuando se hace clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
